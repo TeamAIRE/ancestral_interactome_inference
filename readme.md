@@ -6,19 +6,19 @@ For each edge present in the interactome of at least two extant taxa
 ```
 1: present / 0: absent
 
-          -- 1 X--O (edge present in the network of this species)         
+          -- 1 X--O (edge present in the interactome of this species)         
        --|
-      |   -- 1 X--O (edge present in the network of this species)
+      |   -- 1 X--O (edge present in the interactome of this species)
     --|
    |  |   -- 0
  --|   --|
    |      -- 0 
    |
-    -------- 1 X--O (edge present in the network of this species)
+    -------- 1 X--O (edge present in the interactome of this species)
 ```
 
 Returns the evolutionary history of the edge along the tree inferred by parsimony.
-This allows ancestral networks inferences. 
+This allows ancestral interactomes inference. 
 
 ```
           -- 1 X--O
@@ -47,8 +47,6 @@ Run on linux, with python3
 ```
 usage: ancestral_interactome_inference.py [-h] [-t TREE] [-e EDGES_DIR]
                                           [-o OUTDIR]
-
-Map edges of PPIs to nodes of a reference phylogenetic tree
 
 optional arguments:
   -h, --help    show this help message and exit
