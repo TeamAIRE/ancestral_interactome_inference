@@ -2,8 +2,7 @@
 
 ## What it does
 
-For each edge present in at least two extant networks (on the basis of (ortho|homo)logy)
-
+For each edge present in the interactome of at least two extant taxa
 ```
 1: present / 0: absent
 
@@ -18,7 +17,7 @@ For each edge present in at least two extant networks (on the basis of (ortho|ho
     -------- 1 X--O (edge present in the network of this species)
 ```
 
-returns the inferred evolutionary history of the edge along the tree (using parsimony)
+Returns the evolutionary history of the edge along the tree inferred by parsimony.
 This allows ancestral networks inferences. 
 
 ```
@@ -61,7 +60,7 @@ optional arguments:
 
 ## Format of input data
 
-see ```ancestral_interactome_inference/first_lines_of_input_data_files_to_visualize_format``` for template
+see ```ancestral_interactome_inference/first_lines_of_input_data_files_to_visualize_format``` for examples
 
 * TREE
 
@@ -71,5 +70,5 @@ A phylogenetic tree of the taxa for which interactome data is available (in newi
 
 A directory where the interactomes are stored.
 
-Each interactome file must be named according to the corresponding taxon name (as referenced on the aformentionned tree) followed by "__" and whatever suffix.
+Each interactome file must be named according to the corresponding taxon name (as referenced on the leaves of the aformentionned tree) followed by "__" and whatever suffix.
 An interactome file is a tabular file (tab-separated tsv file) with no header and two columns (nodeA, nodeB). Each line corresponds to an edge. Each node (protein) must be named according to the orthologous group id in order to allow comparisons of interactomes between extant taxa. 
